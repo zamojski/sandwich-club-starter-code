@@ -3,6 +3,8 @@
 
     <data>
 
+        <import type="android.text.TextUtils" />
+
         <variable
             name="sandwich"
             type="com.udacity.sandwichclub.model.Sandwich" />
@@ -88,7 +90,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="@{String.join(`, `, sandwich.ingredients)}"
+                android:text="@{TextUtils.join(`, `, sandwich.ingredients)}"
                 app:layout_constraintStart_toStartOf="@+id/ingredients_label_tv"
                 app:layout_constraintTop_toBottomOf="@+id/ingredients_label_tv"
                 tools:text="Ingredients value" />
@@ -98,7 +100,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="@{String.join(`, `, sandwich.alsoKnownAs)}"
+                android:text="@{TextUtils.join(`, `, sandwich.alsoKnownAs)}"
                 app:layout_constraintStart_toStartOf="@+id/also_known_label_tv"
                 app:layout_constraintTop_toBottomOf="@+id/also_known_label_tv"
                 tools:text="Also known value" />
